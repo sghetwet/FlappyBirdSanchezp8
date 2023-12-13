@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    AudioSource audioSource;
     private bool isDead = false;
     private Rigidbody2D rb2d;
     public float upForce = 100;
     private Animator anim;
     public AudioClip Score;
     public AudioClip flap;
-    AudioSource audioSource;
+    public AudioClip die;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class Bird : MonoBehaviour
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
                 anim.SetTrigger("Flap");
+                PlaySound(flap);
             }
         }
     }
@@ -38,9 +40,10 @@ public class Bird : MonoBehaviour
         isDead = true;
         anim.SetTrigger("Die");
         GameControl.instance.BirdDied();
+        PlaySound(die);
     }
     public void PlaySound(AudioClip clip)
     {
-        audioSource.PlayOneShot(flap);
+        audioSource.PlayOneShot(clip);
     }
 }

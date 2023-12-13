@@ -12,6 +12,11 @@ public class GameControl : MonoBehaviour
     public float scrollspeed = -1.5f;
     private int score = 0;
     public TextMeshProUGUI scoreText;
+    public AudioClip Score;
+    AudioClip audioClip;
+    private void Start()
+    {
+    }
     // Start is called before the first frame update
     void Awake()
     {
