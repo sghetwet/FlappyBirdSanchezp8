@@ -3,7 +3,10 @@ guid: 2ca453757c0b5984d8e63d07a2cc0b76
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Score: {fileID: 8300000, guid: 4065aae0d4e992d4c9c1484f78765900, type: 3}
+  - flap: {fileID: 8300000, guid: 4ef6c23dc78e2834589ab5443d6a54a7, type: 3}
+  - die: {fileID: 8300000, guid: bbb7d7e0cf6960847970ee7cac811f27, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
