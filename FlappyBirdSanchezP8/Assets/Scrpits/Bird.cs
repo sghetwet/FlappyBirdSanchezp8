@@ -17,7 +17,6 @@ public class Bird : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator> ();
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
